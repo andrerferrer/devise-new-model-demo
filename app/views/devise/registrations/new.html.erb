@@ -15,7 +15,12 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.association :skills %>
+    <%# f.association :skills %>
+    <h2>Address</h2>
+    <%= f.simple_fields_for :address_attributes do |field| %>
+      <%= field.input :description %>
+      <%= field.input :country %>
+    <% end %>
   </div>
 
   <div class="form-actions">
