@@ -1,13 +1,14 @@
 ## Goal
-This is an app to teach how to create a new user and a nested model in the same form.
+
+This demo was created from [this](https://github.com/andrerferrer/devise-nested-model-demo#goal)
+
+This is an app to teach how to create a new user and a new model in the same form.
 
 [You can also check my other demos](https://github.com/andrerferrer/dedemos/blob/master/README.md#ded%C3%A9mos).
 
 ### Before we begin, the DB Schema:
 
-A user has many skills and a skill can have many users.
-
-![Database Schema](https://user-images.githubusercontent.com/45776359/110645997-3be67000-8195-11eb-84ab-016470fce0b1.png)
+A user has many addresses and each address belongs to only one user.
 
 ### How to
 
@@ -17,7 +18,7 @@ A user has many skills and a skill can have many users.
 
 ### If you want to check it locally
 ```sh
-repo_name="devise-nested-model-demo"
+repo_name="devise-new-model-demo"
 gh_repository="git@github.com:andrerferrer/$repo_name.git"
 git clone $gh_repository demo
 cd demo
