@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def config_devise_params # https://github.com/heartcombo/devise#strong-parameters
     # This allows nickname to be added to the sign up
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, skill_ids: []])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, skill_ids: [], address_attributes: {}])
     # This allows nickname to be added to the editting of the account
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, skill_ids: []])
   end
