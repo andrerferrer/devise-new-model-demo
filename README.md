@@ -8,7 +8,7 @@ This is an app to teach how to create a new user and a new model in the same for
 
 ### Before we begin, the DB Schema:
 
-A user has many addresses and each address belongs to only one user.
+A user has one address and each address belongs to only one user.
 
 ### How to
 

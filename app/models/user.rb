@@ -6,8 +6,8 @@ class User < ApplicationRecord
   
   has_many :user_skills
   has_many :skills, through: :user_skills
-  has_many :addresses, dependent: :destroy
+  has_one :address, dependent: :destroy
 
   accepts_nested_attributes_for :skills # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
-  accepts_nested_attributes_for :addresses # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+  accepts_nested_attributes_for :address # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
 end

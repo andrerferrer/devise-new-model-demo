@@ -1,12 +1,10 @@
 User.create!(
   email: 'player@one.com',
   password: 123456,
-  addresses_attributes: [
-    {
-      description: 'Nice street, 123, City - State',
-      country: 'Brazil'
-    }
-  ]
+  address_attributes: {
+    description: 'Nice street, 123, City - State',
+    country: 'Brazil'
+  }
 )
 
 Skill.create!(
