@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :addresses, dependent: :destroy
 
   accepts_nested_attributes_for :skills # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+  accepts_nested_attributes_for :addresses # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
 end

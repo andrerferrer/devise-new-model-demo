@@ -1,6 +1,12 @@
 User.create!(
   email: 'player@one.com',
-  password: 123456
+  password: 123456,
+  addresses_attributes: [
+    {
+      description: 'Nice street, 123, City - State',
+      country: 'Brazil'
+    }
+  ]
 )
 
 Skill.create!(
@@ -13,10 +19,11 @@ Skill.create!(
   name: 'Back end developing'
 )
 
-Address.create!(
-  description: 'Nice street, 123, City - State',
-  country: 'Brazil',
-  user: User.first
-)
+# This is no longer needed because of line 4
+# Address.create!(
+#   description: 'Nice street, 123, City - State',
+#   country: 'Brazil',
+#   user: User.first
+# )
 
 User.first.skills << [Skill.first, Skill.second]
